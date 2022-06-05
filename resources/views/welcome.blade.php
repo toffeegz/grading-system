@@ -17,15 +17,17 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
+                background: rgb(237,200,184);
+                background: linear-gradient(218deg, rgba(237,200,184,0.4) 13%, rgba(68,136,178,0.3) 48%, rgba(187,178,181,0.4) 89%);
             }
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div class="relative flex items-top justify-center min-h-screen  sm:items-center py-4 sm:pt-0 bg-stone-100 bg-opacity-25">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
