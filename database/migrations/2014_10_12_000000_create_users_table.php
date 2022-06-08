@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('middle_name')->nullable();
             $table->string('suffix_name')->nullable();
             $table->boolean('system_access')->default(true);
+            $table->string('profile_photo_path', 2048)->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
