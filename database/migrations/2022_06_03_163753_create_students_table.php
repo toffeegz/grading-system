@@ -25,6 +25,7 @@ class CreateStudentsTable extends Migration
             $table->unsignedTinyInteger('marital_status')->default(0)->comment('0-single');
             $table->text('address')->nullable();
             $table->date('inactive_date')->nullable();
+            $table->boolean('is_official')->default(true);
             $table->timestamps();
             $table->softDeletes();
         });
