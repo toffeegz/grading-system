@@ -11,16 +11,8 @@
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
-        <div class="flex h-screen bg-gray-50 " :class="{ 'overflow-hidden': isSideMenuOpen }">
 
-            @include('layouts.navigations.sidebar')
-            <div class="w-0 md:w-64">
-            </div>
-            <main class="flex flex-col flex-1 w-full">
-                @include('layouts.navigations.header')
-                {{ $slot }}
-            </main>
-        </div>
+        @yield('content')
 
         @livewireScripts
         @include('layouts.partials.scripts')
