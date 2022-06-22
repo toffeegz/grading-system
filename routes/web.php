@@ -13,11 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// 
+Route::group(['namespace' => 'App\Http\Livewire'], function() {
+    Route::get('/', Guest\LandingPageComponent::class)->name('landing-page');
+});
+
+// administrator and instructor
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::group(['namespace' => 'App\Http\Livewire'], function() {
-        Route::get('/', function () {
-            return redirect()->route('dashboard');
-        });
         Route::get('dashboard', Dashboard\DashboardComponent::class)->name('dashboard');
     });
 });

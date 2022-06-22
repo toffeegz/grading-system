@@ -1,10 +1,10 @@
-    
+    {{-- mainly for administrator and instructor --}}
     {{-- Desktop Sidebar --}}
     <div class="fixed">
-        <aside class="z-20 hidden w-64 overflow-y-auto scrollbar-hide h-screen bg-white md:block flex-shrink-0 border-r-2 border-gray-100">
+        <aside class="z-20 hidden w-64 overflow-y-auto scrollbar-hide h-screen bg-white md:block flex-shrink-0 border-r border-gray-200">
             <div class="pt-4 text-gray-500 flex flex-col h-full">
                 
-                <a href="#" class="ml-6 text-lg font-bold text-gray-800 flex-none">
+                <a class="ml-6 flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
                     {{ Helper::getCompanyInformation()->name }}
                 </a>
                 <div class="mt-6 flex-auto text-sm font-medium" style="color: #495057; letter-spacing: .015em; ">
